@@ -12,6 +12,13 @@ app.get('/pokemon', (req, res) => {
   });
 });
 
+// show route
+app.get('/pokemon/:id', (req, res) => {
+
+ res.send(req.params.id);
+  // res.send(Pokemon[req.params.id]);
+});
+
 app.listen(3000, () => {
   console.log("Gotta catch em all")
 });
