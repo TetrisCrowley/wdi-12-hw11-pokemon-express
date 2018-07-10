@@ -3,11 +3,13 @@ const express = require('express');
 const app = express();
 
 // database
-const pokemon = require('./models/pokemon');
+const Pokemon = require('./models/pokemon');
 
 // index route
 app.get('/pokemon', (req, res) => {
-  res.send(pokemon);
+  res.render('index.ejs', {
+    pokemon: Pokemon
+  });
 });
 
 app.listen(3000, () => {
