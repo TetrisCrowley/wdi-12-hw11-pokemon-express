@@ -1,9 +1,13 @@
+
 const express = require('express');
 const app = express();
 
+// database
+const pokemon = require('./models/pokemon');
 
-app.get('/pokemon/', (req, res) => {
-  res.send('Welcome to the Pokemon App!');
+// index route
+app.get('/pokemon', (req, res) => {
+  res.send(pokemon);
 });
 
 app.listen(3000, () => {
