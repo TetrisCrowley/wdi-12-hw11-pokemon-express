@@ -5,6 +5,8 @@ const app = express();
 // database
 const Pokemon = require('./models/pokemon');
 
+app.use(express.static('public'));
+
 // index route
 app.get('/pokemon', (req, res) => {
   res.render('index.ejs', {
